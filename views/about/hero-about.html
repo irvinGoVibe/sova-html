@@ -1,0 +1,124 @@
+<!-- Hero About Section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About SOVA Global</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #0a0a1a;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .hero-about {
+      position: relative;
+      width: 100vw;
+      min-height: 100vh;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('http://localhost:3845/assets/c6fecc171b6d5e02310cfdb012bb9bff5f3c0f69.svg') center center/cover no-repeat, #2170c5;
+      overflow: hidden;
+    }
+    .hero-bg-overlay {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 1;
+      pointer-events: none;
+      user-select: none;
+      opacity: 1;
+    }
+    .hero-autolayout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      z-index: 2;
+      position: relative;
+    }
+    .hero-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 1.1;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      width: 100%;
+      max-width: 900px;
+    }
+    .hero-subtitle {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 1.4;
+      color: #e3eaf7;
+      text-align: center;
+      margin: 0;
+      width: 100%;
+      max-width: 700px;
+    }
+    .hero-btn {
+      background: #fff;
+      border: none;
+      border-radius: 32px;
+      padding: 18px 48px;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      color: #2170c5;
+      cursor: pointer;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+      transition: background 0.2s, color 0.2s;
+      outline: none;
+      margin: 0 auto;
+      display: block;
+    }
+    .hero-btn:hover {
+      background: #e3eaf7;
+      color: #174a8c;
+    }
+    @media (max-width: 900px) {
+      .hero-title {
+        font-size: 36px;
+      }
+      .hero-subtitle {
+        font-size: 16px;
+      }
+      .hero-btn {
+        font-size: 16px;
+        padding: 12px 24px;
+      }
+      .hero-autolayout {
+        gap: 20px;
+        max-width: 98vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="hero-about">
+    <img class="hero-bg-overlay" src="http://localhost:3845/assets/cb030769b7f7819c1cac257369c8d1ae272c6f68.svg" alt="Overlay" />
+    <div class="hero-autolayout">
+      <h1 class="hero-title">About SOVA Global</h1>
+      <div class="hero-subtitle">Empowering mobility, trade, and industrial growth across the globe</div>
+      <button class="hero-btn">Explore Our Services</button>
+    </div>
+  </section>
+</body>
+</html> 

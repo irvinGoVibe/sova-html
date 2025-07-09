@@ -1,0 +1,127 @@
+<!-- Header component -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header</title>
+  <style>
+    body { margin: 0; }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background: rgba(255,255,255,0.85);
+      box-shadow: 0 4px 4px 0 rgba(15,62,160,0.15);
+      border-radius: 40px;
+      padding: 10px 32px;
+      font-family: 'Montserrat', Arial, sans-serif;
+      position: relative;
+      min-height: 60px;
+    }
+    .header__logo {
+      height: 37px;
+      width: 109px;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    .header__nav {
+      display: flex;
+      gap: 56px;
+      font-weight: 300;
+      font-size: 22px;
+      color: #222;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%;
+      justify-content: center;
+    }
+    .header__nav a {
+      text-decoration: none;
+      color: inherit;
+      white-space: nowrap;
+      transition: color 0.2s;
+    }
+    .header__nav a:hover {
+      color: #2c80dc;
+    }
+    .header__burger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-left: auto;
+    }
+    .header__burger img {
+      width: 40px;
+      height: 40px;
+    }
+    @media (max-width: 1200px) {
+      .header__nav {
+        gap: 32px;
+        font-size: 18px;
+        width: 70%;
+      }
+    }
+    @media (max-width: 900px) {
+      .header__nav {
+        display: none;
+      }
+      .header__burger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <img src="http://localhost:3845/assets/833d46b0c00cf2b065d466634e8562fdb16804e8.svg" alt="Sova Logo" height="37" width="109" />
+    </div>
+    <nav class="header__nav">
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#trading">Trading</a>
+      <a href="#investments">Investments</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="header__burger" aria-label="Open menu" onclick="toggleMenu()">
+      <img src="http://localhost:3845/assets/d7413bf9709fb2119ac8b2ae5b1606a05e481c86.svg" alt="Sova Icon" />
+    </button>
+  </header>
+  <script>
+    function toggleMenu() {
+      const nav = document.querySelector('.header__nav');
+      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    }
+    // Для закрытия меню при клике вне навигации (мобильный UX)
+    document.addEventListener('click', function(e) {
+      const nav = document.querySelector('.header__nav');
+      const burger = document.querySelector('.header__burger');
+      if (window.innerWidth <= 900 && nav.style.display === 'flex' && !nav.contains(e.target) && !burger.contains(e.target)) {
+        nav.style.display = 'none';
+      }
+    });
+    // Сброс меню при ресайзе
+    window.addEventListener('resize', function() {
+      const nav = document.querySelector('.header__nav');
+      if (window.innerWidth > 900) {
+        nav.style.display = 'flex';
+      } else {
+        nav.style.display = 'none';
+      }
+    });
+    // Инициализация
+    window.addEventListener('DOMContentLoaded', function() {
+      const nav = document.querySelector('.header__nav');
+      if (window.innerWidth > 900) {
+        nav.style.display = 'flex';
+      } else {
+        nav.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html> 
