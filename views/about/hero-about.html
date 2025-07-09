@@ -136,6 +136,34 @@
       </div>
     </div>
   </section>
+  <section class="mission-section">
+    <div class="mission-container">
+      <h2 class="mission-title"><span class="mission-gradient">Our</span> Mission and Values</h2>
+      <div class="mission-desc">To enhance mobility, supply efficiency, and investment performance through transparent, reliable, and forward-thinking services.</div>
+      <div class="mission-cards">
+        <div class="mission-card mission-card-white">
+          <div class="mission-card-icon" style="background-image:url('http://localhost:3845/assets/6c57d2d87c2306e1ba43836a911ca18fc24587f7.png');"></div>
+          <div class="mission-card-title">Precision</div>
+          <div class="mission-card-text">We deliver every project with technical and operational accuracy.</div>
+        </div>
+        <div class="mission-card mission-card-blue">
+          <div class="mission-card-icon" style="background-image:url('http://localhost:3845/assets/7a2597df3413e4d5dc7aa7501e89488cb068fa62.png');"></div>
+          <div class="mission-card-title">Reliability</div>
+          <div class="mission-card-text">Trusted by regional airlines, logistics companies, and investors.</div>
+        </div>
+        <div class="mission-card mission-card-blue">
+          <div class="mission-card-icon" style="background-image:url('http://localhost:3845/assets/6e2cc0908fe2978ecc2aedefe0a81774ac3fe5ea.png');"></div>
+          <div class="mission-card-title">Partnership</div>
+          <div class="mission-card-text">We build long-term collaborations, not just contracts.</div>
+        </div>
+        <div class="mission-card mission-card-blue">
+          <div class="mission-card-icon" style="background-image:url('http://localhost:3845/assets/23095d9d0181b60b787a4b38978e07255fe3c302.png');"></div>
+          <div class="mission-card-title">Global Reach</div>
+          <div class="mission-card-text">Operations across the UAE, Central Asia, Africa, and Europe.</div>
+        </div>
+      </div>
+    </div>
+  </section>
   <style>
     .who-we-are-section {
       width: 100vw;
@@ -159,6 +187,7 @@
       box-sizing: border-box;
       gap: 40px;
       position: relative;
+      margin: 0 auto;
     }
     .who-we-are-text {
       flex: 1 1 50%;
@@ -264,6 +293,143 @@
       }
       .who-we-are-image-wrap {
         height: 180px;
+      }
+    }
+    .mission-section {
+      width: 100vw;
+      background: #fff;
+      color: #181a2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      min-height: 700px;
+      position: relative;
+      overflow: hidden;
+    }
+    .mission-container {
+      width: 100vw;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 80px 40px 80px 40px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .mission-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 68px;
+      margin: 0 0 32px 0;
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+      color: #181a2a;
+    }
+    .mission-gradient {
+      background: linear-gradient(90deg, #1750b0 0%, #3087e3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      color: #2170c5;
+    }
+    .mission-desc {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 20px;
+      font-weight: 300;
+      color: #666;
+      line-height: 28px;
+      margin-bottom: 48px;
+      max-width: 900px;
+    }
+    .mission-cards {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: stretch;
+      flex-wrap: wrap;
+    }
+    .mission-card {
+      border-radius: 24px;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
+      padding: 40px 32px 32px 32px;
+      min-width: 260px;
+      max-width: 340px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 24px;
+      background: linear-gradient(120deg, #2170c5 0%, #3087e3 100%);
+      color: #fff;
+      position: relative;
+      flex: 1 1 300px;
+      transition: box-shadow 0.2s;
+    }
+    .mission-card-white {
+      background: #f8f9fa;
+      color: #181a2a;
+    }
+    .mission-card-icon {
+      width: 96px;
+      height: 96px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 16px;
+    }
+    .mission-card-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 27px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .mission-card-text {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: #bfc6d1;
+      line-height: 20px;
+    }
+    @media (max-width: 1200px) {
+      .mission-title {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      .mission-cards {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .mission-card {
+        max-width: 100%;
+        min-width: 0;
+        width: 100%;
+      }
+    }
+    @media (max-width: 700px) {
+      .mission-title {
+        font-size: 28px;
+        line-height: 32px;
+      }
+      .mission-desc {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      .mission-card-title {
+        font-size: 18px;
+      }
+      .mission-card-text {
+        font-size: 12px;
+      }
+      .mission-container {
+        padding: 40px 10px;
       }
     }
   </style>
