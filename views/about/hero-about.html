@@ -168,12 +168,12 @@
     <div class="what-we-do-container">
       <h2 class="what-title"><span class="what-gradient">What</span> We Do</h2>
       <div class="what-cards">
-        <div class="what-card">
-          <div class="what-card-img" style="background-image:url('http://localhost:3845/assets/46a2b09b939d5c540e34a1c8044a94d08f8106c0.png');"></div>
+        <div class="what-card what-card-aircraft">
           <div class="what-card-content">
-            <div class="what-card-title">Aircraft Leasing & Chartering</div>
-            <div class="what-card-desc">Flexible aviation solutions for diverse needs.</div>
+            <div class="what-card-title" style="font-size:40px;line-height:1.1;margin-bottom:16px;">Aircraft Leasing & Chartering</div>
+            <div class="what-card-desc" style="font-size:22px;line-height:1.3;">Flexible aviation solutions for diverse needs.</div>
           </div>
+          <div class="what-card-img-aircraft"></div>
         </div>
         <div class="what-card">
           <div class="what-card-img" style="background-image:url('http://localhost:3845/assets/7a4da481cc240c2696a5bb55c6e64d0003d87936.png');"></div>
@@ -664,6 +664,34 @@
       .what-cards {
         gap: 16px;
       }
+    }
+    .what-card-aircraft {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      background: #f8f9fa;
+      height: 340px;
+      min-height: 340px;
+      max-height: 340px;
+      padding: 32px 32px 24px 32px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .what-card-aircraft .what-card-content {
+      z-index: 2;
+      width: 60%;
+    }
+    .what-card-img-aircraft {
+      position: absolute;
+      right: -30px;
+      bottom: -30px;
+      width: 240px;
+      height: 240px;
+      background: url('http://localhost:3845/assets/46a2b09b939d5c540e34a1c8044a94d08f8106c0.png') no-repeat right bottom;
+      background-size: contain;
+      z-index: 1;
+      pointer-events: none;
+      transform: rotate(18deg);
     }
   </style>
 </body>
