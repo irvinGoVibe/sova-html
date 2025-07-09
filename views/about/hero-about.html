@@ -120,5 +120,152 @@
       <button class="hero-btn">Explore Our Services</button>
     </div>
   </section>
+  <section class="who-we-are-section">
+    <div class="who-we-are-container">
+      <div class="who-we-are-text">
+        <h2 class="who-title"><span class="who-gradient">Who</span> <span class="who-black">We Are</span></h2>
+        <p class="who-desc">
+          SOVA Global is a strategic enterprise based in the UAE, offering tailored solutions across aviation, logistics, industrial supply, and global commodity trading. We collaborate with leading companies in Central Asia, the Middle East, Africa, and Europe — delivering reliable services at the intersection of transportation and international trade.
+        </p>
+      </div>
+      <div class="who-we-are-image-wrap">
+        <div class="who-bg who-bg-1"></div>
+        <div class="who-bg who-bg-2"></div>
+        <img class="who-ellipse" src="http://localhost:3845/assets/d927ef1322912e4f93a2a5d4e6a8b16125563d1f.svg" alt="Ellipse" />
+        <!-- Здесь должен быть самолет, но в коде Figma только декоративные bg -->
+      </div>
+    </div>
+  </section>
+  <style>
+    .who-we-are-section {
+      width: 100vw;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      min-height: 700px;
+      position: relative;
+      overflow: hidden;
+    }
+    .who-we-are-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      max-width: 1600px;
+      padding: 120px 40px 120px 80px;
+      box-sizing: border-box;
+      gap: 40px;
+      position: relative;
+    }
+    .who-we-are-text {
+      flex: 1 1 50%;
+      max-width: 650px;
+      min-width: 320px;
+    }
+    .who-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 68px;
+      margin: 0 0 32px 0;
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+    }
+    .who-gradient {
+      background: linear-gradient(90deg, #1750b0 0%, #3087e3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+    .who-black {
+      color: #10101c;
+    }
+    .who-desc {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      color: #666;
+      line-height: 24px;
+      margin: 0;
+      max-width: 530px;
+    }
+    .who-we-are-image-wrap {
+      flex: 1 1 50%;
+      min-width: 320px;
+      position: relative;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .who-bg.who-bg-1 {
+      position: absolute;
+      left: 60px;
+      top: 120px;
+      width: 909px;
+      height: 549px;
+      background: url('http://localhost:3845/assets/c452d2e7415d49460edc2bb84932956b1dbb7452.png') no-repeat;
+      background-size: 126% 163%;
+      background-position: -0.21% 74.61%;
+      filter: blur(3.7px);
+      opacity: 0.54;
+      z-index: 1;
+    }
+    .who-bg.who-bg-2 {
+      position: absolute;
+      left: 60px;
+      top: 0;
+      width: 909px;
+      height: 694px;
+      background: url('http://localhost:3845/assets/6cfe8a68a7b71fa97c99132e051457cf17a0feb8.png') no-repeat;
+      background-size: 127% 129%;
+      background-position: -0.78% 55.58%;
+      z-index: 2;
+    }
+    .who-ellipse {
+      position: absolute;
+      left: 0;
+      top: 200px;
+      width: 847px;
+      height: 395px;
+      z-index: 3;
+      pointer-events: none;
+      user-select: none;
+      transform: rotate(-10deg);
+    }
+    @media (max-width: 1200px) {
+      .who-we-are-container {
+        flex-direction: column;
+        padding: 60px 10px;
+        gap: 24px;
+      }
+      .who-we-are-image-wrap {
+        height: 320px;
+        min-width: 0;
+      }
+      .who-bg.who-bg-1, .who-bg.who-bg-2, .who-ellipse {
+        width: 90vw;
+        left: 0;
+      }
+    }
+    @media (max-width: 700px) {
+      .who-title {
+        font-size: 32px;
+        line-height: 40px;
+      }
+      .who-desc {
+        font-size: 14px;
+        line-height: 18px;
+      }
+      .who-we-are-image-wrap {
+        height: 180px;
+      }
+    }
+  </style>
 </body>
 </html> 
