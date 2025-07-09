@@ -415,6 +415,24 @@
         width: 100%;
       }
     }
+    @media (max-width: 1200px) {
+      .mission-cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+      }
+      .mission-card {
+        width: 305px;
+        min-width: 305px;
+        max-width: 305px;
+        height: 275px;
+        flex: 1 1 45%;
+      }
+      .mission-card:nth-child(odd) {
+        margin-right: 24px;
+      }
+    }
     @media (max-width: 700px) {
       .mission-title {
         font-size: 28px;
@@ -432,6 +450,16 @@
       }
       .mission-container {
         padding: 40px 10px;
+      }
+      .mission-cards {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .mission-card {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        height: auto;
       }
     }
   </style>
