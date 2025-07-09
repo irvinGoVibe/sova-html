@@ -164,6 +164,54 @@
       </div>
     </div>
   </section>
+  <section class="what-we-do-section">
+    <div class="what-we-do-container">
+      <h2 class="what-title"><span class="what-gradient">What</span> We Do</h2>
+      <div class="what-cards">
+        <div class="what-card">
+          <div class="what-card-img" style="background-image:url('http://localhost:3845/assets/46a2b09b939d5c540e34a1c8044a94d08f8106c0.png');"></div>
+          <div class="what-card-content">
+            <div class="what-card-title">Aircraft Leasing & Chartering</div>
+            <div class="what-card-desc">Flexible aviation solutions for diverse needs.</div>
+          </div>
+        </div>
+        <div class="what-card">
+          <div class="what-card-img" style="background-image:url('http://localhost:3845/assets/7a4da481cc240c2696a5bb55c6e64d0003d87936.png');"></div>
+          <div class="what-card-content">
+            <div class="what-card-title">Air Cargo Brokerage</div>
+            <div class="what-card-desc">Global logistics coordination</div>
+          </div>
+        </div>
+        <div class="what-card">
+          <div class="what-card-img" style="background-image:url('http://localhost:3845/assets/305a5ba758c20cec6547ff134faf286515086b68.png');"></div>
+          <div class="what-card-content">
+            <div class="what-card-title">Industrial Equipment Supply</div>
+            <div class="what-card-desc">Quality machinery and tools</div>
+          </div>
+        </div>
+        <div class="what-card">
+          <div class="what-card-img" style="background-image:url('http://localhost:3845/assets/cb24d79e26d1f7c41069eb2e1ef937a4c7427421.png');"></div>
+          <div class="what-card-content">
+            <div class="what-card-title">Trading</div>
+            <div class="what-card-desc">Metals, oil & aviation components</div>
+          </div>
+        </div>
+        <div class="what-card">
+          <div class="what-card-img" style="background-image:url('http://localhost:3845/assets/9f1a9f96c92f3919e8674e268c07454ad6e828a3.png');"></div>
+          <div class="what-card-content">
+            <div class="what-card-title">Investment Programs</div>
+            <div class="what-card-desc">Joint ventures & opportunities</div>
+          </div>
+        </div>
+        <div class="what-card what-card-blue">
+          <div class="what-card-content what-card-content-row">
+            <div class="what-card-title what-card-title-white">Explore Our Services</div>
+            <img class="what-card-arrow" src="http://localhost:3845/assets/12b36ac76cbbe1d9f5c87ec4cd0a09adda369ab6.svg" alt="arrow" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <style>
     .who-we-are-section {
       width: 100vw;
@@ -460,6 +508,161 @@
         min-width: 0;
         max-width: 100%;
         height: auto;
+      }
+    }
+    .what-we-do-section {
+      width: 100vw;
+      background: #fff;
+      color: #181a2a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      min-height: 600px;
+      position: relative;
+      overflow: hidden;
+    }
+    .what-we-do-container {
+      width: 100vw;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 80px 40px 80px 40px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .what-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 68px;
+      margin: 0 0 32px 0;
+      display: flex;
+      align-items: flex-end;
+      gap: 12px;
+      color: #181a2a;
+    }
+    .what-gradient {
+      background: linear-gradient(90deg, #1750b0 0%, #3087e3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      color: #2170c5;
+    }
+    .what-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 32px;
+      width: 100%;
+      justify-items: stretch;
+      align-items: stretch;
+    }
+    .what-card {
+      background: #f8f9fa;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.04);
+      padding: 32px 32px 24px 32px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      min-height: 170px;
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.2s;
+    }
+    .what-card-img {
+      width: 96px;
+      height: 96px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right center;
+      flex-shrink: 0;
+      margin-left: auto;
+      margin-right: 0;
+    }
+    .what-card-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      max-width: 260px;
+    }
+    .what-card-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 27px;
+      font-weight: 400;
+      color: #181a2a;
+      margin-bottom: 4px;
+    }
+    .what-card-desc {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: #666;
+      line-height: 20px;
+    }
+    .what-card-blue {
+      background: linear-gradient(120deg, #2170c5 0%, #3087e3 100%);
+      color: #fff;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 32px 32px 24px 32px;
+    }
+    .what-card-title-white {
+      color: #fff;
+    }
+    .what-card-content-row {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 24px;
+    }
+    .what-card-arrow {
+      width: 38px;
+      height: 38px;
+      margin-left: 16px;
+    }
+    @media (max-width: 1200px) {
+      .what-title {
+        font-size: 36px;
+        line-height: 40px;
+      }
+      .what-cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: 24px;
+      }
+      .what-card {
+        min-width: 0;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+    @media (max-width: 700px) {
+      .what-title {
+        font-size: 28px;
+        line-height: 32px;
+      }
+      .what-card-title {
+        font-size: 18px;
+      }
+      .what-card-desc {
+        font-size: 12px;
+      }
+      .what-we-do-container {
+        padding: 40px 10px;
+      }
+      .what-cards {
+        gap: 16px;
       }
     }
   </style>
